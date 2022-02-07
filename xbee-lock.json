@@ -1,0 +1,53 @@
+{
+    "Ids": [
+        {
+            "From": {
+                "origin": "https://github.com/xbee-linux/libtool.git"
+            },
+            "Commit": "e0d5a422a54003bcccee34d06250c52ffab6c58e"
+        },
+        {
+            "From": {
+                "origin": "https://github.com/xbee-linux/m4.git"
+            },
+            "Commit": "5be339cc60c1ce3d7d1d52347d558b23becfc8fc"
+        },
+        {
+            "From": {
+                "origin": "https://github.com/xbee-linux/automake.git"
+            },
+            "Commit": "edad90d890d145d948161ffd5f04eb057d662f2f"
+        },
+        {
+            "From": {
+                "origin": "https://github.com/xbee-linux/perl.git"
+            },
+            "Commit": "ad982b1367983be39029980daf7605773837979c"
+        },
+        {
+            "From": {
+                "origin": "https://github.com/xbee-linux/autoconf.git"
+            },
+            "Commit": "901cdefc44cd8e4799541ea0b4736822deb4496e"
+        },
+        {
+            "From": {
+                "origin": "https://github.com/xbee-linux/zlib.git"
+            },
+            "Commit": "6d696eeb4e621fd8208971dbe06cbb3ad893ea72"
+        },
+        {
+            "From": {
+                "origin": "https://github.com/xbee-linux/bzip2.git"
+            },
+            "Commit": "9a607ce13e273f4ea24fd7c436a3ff40a8bedbec"
+        },
+        {
+            "From": {
+                "version": "20.04",
+                "origin": "https://github.com/xbeerepository/ubuntu.git"
+            },
+            "Commit": "446c9f1a9167db4e11f84204430c64c2f15fdd97"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+schema-version: 1.0
+
+description: |
+
+builder: ./pcre2-builder
+
+in:
+  version: "10.39"
+
+
+provision:
+  - copy:
+      builder: pcre2
+      todir: /
