@@ -1,14 +1,35 @@
 schema-version: 1.0
 
+type: builder
+
 description: |
 
-builder: ./pcre2-builder
 
 in:
   version: "10.39"
 
+dependencies:
+  - libtool
+  - m4
+  - automake
+  - autoconf
+  - zlib
+  - bzip2
+  - readline
 
 provision:
-  - copy:
-      builder: pcre2
-      todir: /
+  - url:
+      from: https://github.com/PhilipHazel/pcre2/archive/refs/tags/pcre2-{% version %}.tar.gz
+      todir: "{% xbeeSrc %}"
+
+build:
+  - shell:
+      cmds:
+        - ./autogen.sh
+        - CC=gcc ./configure --prefix=/usr -G -O3
+        - make
+#        - make test
+        - make install DESTDIR={% xbeeOut %}
+      directory: "{% xbeeSrc %}/pcre2-pcre2-{% version %}"
+
+
