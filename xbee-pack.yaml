@@ -5,10 +5,10 @@ type: builder
 description: |
 
 
-in:
+var:
   version: "10.39"
 
-dependencies:
+builders:
   - libtool
   - m4
   - automake
@@ -18,9 +18,7 @@ dependencies:
   - readline
 
 provision:
-  - url:
-      from: https://github.com/PhilipHazel/pcre2/archive/refs/tags/pcre2-{% version %}.tar.gz
-      todir: "{% xbeeSrc %}"
+  url: https://github.com/PhilipHazel/pcre2/archive/refs/tags/pcre2-{{ .version }}.tar.gz
 
 build:
   - shell:
@@ -29,7 +27,7 @@ build:
         - ./configure --prefix=/usr --docdir=/usr/share/doc/pcre2-10.39 --enable-unicode --enable-jit --enable-pcre2-16 --enable-pcre2-32 --enable-pcre2grep-libz --enable-pcre2grep-libbz2 --enable-pcre2test-libreadline --disable-static
         - make
 #        - make test
-        - make install DESTDIR={% xbeeOut %}
-      directory: "{% xbeeSrc %}/pcre2-pcre2-{% version %}"
+        - make install DESTDIR={{ .xbee.out }}
+      directory: "{{ .xbee.src }}/pcre2-pcre2-{{ .version }}"
 
 
